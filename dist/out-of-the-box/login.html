@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikrotik | Login</title>
+
+    <link rel="stylesheet" href="./flaticon/flaticon.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+<body class="bg-white sm:bg-image sm:bg-no-repeat sm:bg-fixed sm:bg-cover sm:bg-center">
+
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	</script>
+$(endif)
+
+    <div class="box-container md:w-4/5 lg:w-2/3 xl:w-1/2 pt-8 md:pt-0 flex flex-col md:flex-row md:mt-40 md:mx-auto md:bg-white md:shadow-xl">
+        <div class="box-form bg-box-form md:w-1/2 md:ml-5 md:shadow-xl">
+            <div class="w-full h-full bg-color-third bg-opacity-0 sm:bg-opacity-75 pt-10 pb-16">
+                <div class="w-4/5 sm:w-1/2 md:w-2/3 mx-auto">
+                    <div class="w-4/5 mx-auto h-16 text-center flex items-center justify-center">
+                        <div class="w-full">
+                            <h1 class="text-3xl md:text-2xl font-bold text-color-fifth md:text-white">
+                                <img src="./img/logo_purple.png" alt="Logo" class="block md:hidden mx-auto">
+                                <img src="./img/logo_white.png" alt="Logo" class="hidden md:block mx-auto">
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <h2 class="text-lg font-bold text-color-fifth md:text-white">Log In Wifi</h2>
+                    </div>
+                    <p class="mt-4 text-center text-sm md:text-xs md:text-gray-200">Kode Voucher</p>
+                    <form name="login" action="$(link-login-only)" method="post"
+                        $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                        <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />
+                        <input type="hidden" name="password" id="password">
+
+                        <div class="mt-2">
+                            <input type="text" name="username" id="username" class="w-full bg-white py-2 text-center rounded-full border border-solid border-color-third md:border-color-one tracking-wider outline-none" onkeyup="password.value = username.value" required>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="w-full py-2 text-center rounded-full shadow-xl bg-color-second sm:bg-color-one text-white sm:text-color-fifth border border-solid border-color-third sm:border-color-one tracking-wider inline-flex items-center justify-center outline-none focus:outline-none">
+                                <i class="flaticon-right-arrow mr-2"></i>
+                                Login
+                            </button>
+                        </div>
+                    </form>
+                    $(if error)
+                    <p class="mt-6 text-center text-xs text-red-error md:text-yellow-error">
+                        Maaf, kode voucher tidak berlaku.
+                    </p>
+                    $(endif)
+                </div>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 bg-white">
+            <div class="w-4/5 sm:w-1/2 md:w-4/5 mx-auto pt-8 md:pt-12 pb-12">
+                <h4 class="text-center text-color-fifth font-bold text-xl">
+                    Pengumuman
+                </h4>
+                <p class="text-gray-unstable text-sm mt-8 text-center">
+                    Rumah Anda belum ada Wifi?<br>
+                    Segera hubungi kami untuk wifi cepat dan terjangkau.
+                </p>
+                <h4 class="mt-5 text-center font-bold">
+                    Gratis ... !!!
+                </h4>
+                <div class="text-center mt-6">
+                    <a href="#" class="w-2/3 py-2 px-16 bg-whatsapp-green rounded-full text-white text-sm shadow-xl tracking-wider inline-flex items-center justify-center outline-none focus:outline-none">
+                        <i class="flaticon-whatsapp mr-2"></i>
+                        Whatsapp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
