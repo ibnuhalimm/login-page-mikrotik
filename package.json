@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run build",
-    "build": "postcss css/tailwind.css -o src/css/style.css",
+    "build": "postcss tailwind.css -o src/css/style.css",
     "prod": "npm run production",
     "production": "env NODE_ENV=production postcss src/css/style.css -o dist/css/style.css"
   },
