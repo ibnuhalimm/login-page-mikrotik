@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run build",
-    "build": "postcss tailwind.css -o src/css/style.css",
+    "build": "postcss tailwind.css -o src/atenx.id/css/style.css",
     "prod": "npm run production",
-    "production": "env NODE_ENV=production postcss src/sambirejo/css/style.css -o dist/sambirejo/css/style.css"
+    "production": "env NODE_ENV=production postcss src/atenx.id/css/style.css -o dist/atenx.id/css/style.css"
   },
   "keywords": [],
   "author": "",
