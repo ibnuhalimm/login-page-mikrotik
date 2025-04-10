@@ -1,0 +1,22 @@
+{
+  "name": "tunas-multi-data",
+  "version": "1.0.0",
+  "description": "Mikrotik Hotspot Login Page",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i tailwind.css -o ../css/app.css --watch",
+    "prod": "npx tailwindcss -i tailwind.css -o ../css/app.css --minify"
+  },
+  "keywords": [
+    "mikrotik",
+    "login",
+    "page"
+  ],
+  "author": "Ibnu Halim Mustofa",
+  "license": "MIT"
+}

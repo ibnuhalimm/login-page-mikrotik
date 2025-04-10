@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply bg-baby-powder;
+	@apply text-black;
+	@apply font-sans;
+}
+
+@media screen(md) {
+    body {
+        @apply h-screen;
+    }
+}
+
+@layer utilities {
+    .slider-image {
+        @apply bg-cover bg-no-repeat bg-center;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 24px;
+        @apply text-cerulean-blue;
+    }
+}
