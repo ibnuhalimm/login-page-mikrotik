@@ -11,7 +11,7 @@
 </head>
 <body class="bg-white sm:bg-image sm:bg-no-repeat sm:bg-fixed sm:bg-cover sm:bg-center">
 
-$(if chap-id)
+<!--$(if chap-id)-->
 	<form name="sendin" action="$(link-login-only)" method="post">
 		<input type="hidden" name="username" />
 		<input type="hidden" name="password" />
@@ -28,7 +28,7 @@ $(if chap-id)
 		return false;
 	    }
 	</script>
-$(endif)
+<!--$(endif)-->
 
     <div class="box-container md:w-4/5 lg:w-2/3 xl:w-1/2 pt-8 md:pt-0 flex flex-col md:flex-row md:mt-40 md:mx-auto md:bg-white md:shadow-xl">
         <div class="box-form bg-box-form md:w-1/2 md:ml-5 md:shadow-xl">
@@ -62,11 +62,11 @@ $(endif)
                             </button>
                         </div>
                     </form>
-                    $(if error)
+<!--                    $(if error)-->
                     <p class="mt-6 text-center text-xs text-red-error md:text-yellow-error">
                         Maaf, kode voucher tidak berlaku.
                     </p>
-                    $(endif)
+<!--                    $(endif)-->
                 </div>
             </div>
         </div>
