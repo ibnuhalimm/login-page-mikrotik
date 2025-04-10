@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Panties Pizza - Status</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <link rel="stylesheet" href="./css/flaticon/flaticon.css">
+    <link rel="stylesheet" href="./vendor/slickjs/slick.css">
+    <link rel="stylesheet" href="./vendor/slickjs/slick-theme.css">
+
+    <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+<body>
+    <div id="page--wrapper">
+        <div id="left-container">
+            <div class="container--wrapper">
+
+                <div id="logo-form--outer">
+                    <div id="logo--box">
+                        <div id="logo--wrapper">
+                            <div class="logo-container">
+                                <img src="./img/login_logo.png" alt="Panties Pizza">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="form--box">
+                        <div id="title--text">
+                            You're Connected
+                        </div>
+                        <div id="form--wrapper" style="margin-top: 30px">
+                            <div class="form-button">
+                                <a href="https://google.com" class="btn btn-browsing">
+                                    Browsing
+                                </a>
+                            </div>
+                            <div class="form-button">
+                                <a href="$(link-logout)" class="btn btn-login">
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="support--wrapper">
+                    <div class="text">
+                        powered by
+                    </div>
+                    <div class="image">
+                        <img src="./img/gmedia_logo.png" alt="Gmedia">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right-container">
+            <div id="slider">
+                <div class="slider--image image-01"></div>
+                <div class="slider--image image-02"></div>
+                <div class="slider--image image-03"></div>
+                <div class="slider--image image-04"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/slickjs/slick.min.js"></script>
+    <script>
+        $('#slider').slick({
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dotsClass: 'slick-dot-bottom',
+            fade: true
+        });
+    </script>
+
+</body>
+</html>
